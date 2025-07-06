@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Pattern Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="generator-container">
+        <h1>Background Pattern Generator</h1>
+        <p class="description">Adjust settings to create unique patterns!</p>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="shapeColor">Shape Color:</label>
+                <input type="color" id="shapeColor" value="#3498db">
+            </div>
+
+            <div class="control-group">
+                <label for="shapeSize">Shape Size:</label>
+                <input type="range" id="shapeSize" min="5" max="100" value="30">
+                <span id="shapeSizeValue">30px</span>
+            </div>
+
+            <div class="control-group">
+                <label for="patternDensity">Density:</label>
+                <input type="range" id="patternDensity" min="10" max="200" value="100">
+                <span id="patternDensityValue">100 shapes</span>
+            </div>
+            
+            <button id="generateButton">Generate New Pattern</button>
+            <button id="downloadButton">Download Pattern (PNG)</button>
+        </div>
+
+        <canvas id="patternCanvas" width="600" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
